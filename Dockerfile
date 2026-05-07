@@ -1,7 +1,7 @@
-ARG CADDY_VERSION=v2.10.2
-ARG FRANKENPHP_VERSION=1.10.1
+ARG CADDY_VERSION=v2.11.2
+ARG FRANKENPHP_VERSION=1.12.2
 ARG WORDPRESS_VERSION=latest
-ARG PHP_VERSION=8.4.13
+ARG PHP_VERSION=8.5
 ARG USER=www-data
 
 
@@ -76,9 +76,7 @@ RUN install-php-extensions \
     intl \
     mysqli \
     zip \
-    # See https://github.com/Imagick/imagick/issues/640#issuecomment-2077206945
-    imagick/imagick@master \
-    opcache
+    imagick
 
 
 RUN cp $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
