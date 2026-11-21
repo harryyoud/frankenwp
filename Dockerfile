@@ -76,7 +76,7 @@ RUN install-php-extensions \
     intl \
     mysqli \
     zip \
-    imagick
+    imagick/imagick@refs/heads/master
 
 
 RUN cp $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
